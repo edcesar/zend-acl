@@ -1,11 +1,11 @@
 <?php
-use App\Permissoes;
+use App\AnotherRole;
 
 require_once 'vendor/autoload.php';
 
-$permissoes = new Permissoes;
+$role = new AnotherRole;
 
-if ($permissoes->acl->isAllowed('member', 'someResource')) {
+if ($role->acl->isAllowed('member', 'someResource')) {
     echo "pass" . PHP_EOL;
 } else {
     echo "denied" . PHP_EOL;
